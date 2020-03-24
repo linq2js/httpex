@@ -44,6 +44,7 @@ test('should cancel request properly', async () => {
     console.log(x);
     result = x;
   });
+  await delay(100);
   promise.cancel();
   expect(promise.cancelled).toBe(true);
   await delay(3000);
